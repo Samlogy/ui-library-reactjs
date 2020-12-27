@@ -1,0 +1,9 @@
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-content{
+    background-color: #f5eaea;
+    height: calc(100vh - 12vh);
+    padding: 2rem 1rem;
+}
