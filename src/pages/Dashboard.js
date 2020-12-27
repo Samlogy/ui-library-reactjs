@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table  } from '../components';
+import { SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, DropDownMenu, NavBar  } from '../components';
 // import './style.css';
 
 const Dashboard = () => {
@@ -28,7 +28,6 @@ const Dashboard = () => {
     },
   ];
 
- // Spinner / Table / dropDown
   return (
     <div className="dashboard-container">
         {/* <SideBar /> */}
@@ -36,12 +35,11 @@ const Dashboard = () => {
         {/* { panels.map((el, index) =>  <Accordion key={index} title={el.label} content={el.content} /> ) } */}
         {/* <ShowHidePass /> */}
         {/* <Notification /> */}
-        {/* <TriggerModal /> */}
-
-        {/* ne marche pas */}
-        {/* <Spinner size={100} /> */}
-        
-        <Table />
+        <TriggerModal />
+        {/* <Table /> */}
+       {/* <Spinner /> */}
+      {/* <DropDownMenu /> */}
+      <NavBar />
     </div>
   );
 };
