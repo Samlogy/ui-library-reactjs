@@ -1,0 +1,108 @@
+.step-form-container {
+  height: 24px;
+  height: 100%;
+}
+
+.stepper-indicator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.stepper-indicator.vertical{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.stepper-inner {
+  width: 15em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.stepper-number {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 25px;
+  border-radius: .5rem;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+  border: 2px solid grey;
+  background-color: white;
+  color: grey;
+}
+.stepper-number span:after {
+  width: 999em;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  background-color: #E8E8E8;
+  content: "";
+}
+.stepper-number span:first-child:after {
+  left: 50%;
+}
+.stepper-number span:last-child:after {
+  right: 50%;
+  left: auto;
+}
+.stepper-number.active {
+  border: 2px solid #2196f3;
+  color: white;
+  background-color: #2196f3;
+}
+
+.stepper-label {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+}
+
+.stepper-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.stepper-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.step-form-container button {
+  height: 42px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  border: 0;
+  transition: all 0.2s linear;
+  margin-left: 5px;
+  min-width: 100px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  outline: 0;
+  padding: 10px;
+}
+
+.step-form-container .line {
+  top: 100px;
+  width: 75%;
+  background-color: #d5d5d5;
+  height: 2px;
+  position: absolute;
+  left: 12%;
+}

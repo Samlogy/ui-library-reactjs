@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-// import { useTable, useFilters, useSortBy,  } from "react-table";
 import { useTable, useFilters, useSortBy, usePagination } from 'react-table';
 import makeData from './makeData'
+
+import './style.css'
 
 const TableLayout = ({ columns, data }) => {
   const [filterInput, setFilterInput] = useState("");

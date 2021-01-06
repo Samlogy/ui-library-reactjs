@@ -5,13 +5,6 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
-main {
-  background: #fff;
-  margin: 0 auto;
-  max-width: 680px;
-  padding: 50px 30px;
-}
-
 p {
   line-height: 1.4;
   font-size: 16px;
@@ -65,10 +58,27 @@ h1 {
   width: 560px;
 }
 
-.modal__title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 25px;
+.modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: .5rem .75rem;
+  border-bottom: 1px solid lightgray;
+}
+.modal-header .close-icon{
+  font-size: 1.35rem;
+  transition: all 150ms;
+}
+.modal-header .close-icon:hover{
+  cursor: pointer;
+}
+.modal-body {
+  padding: .5rem .75rem;
+  border-bottom: 1px solid lightgray;
+}
+.modal-footer {
+  padding: 0 .75rem;
+  margin: .5rem 0;
 }
 
 button {
@@ -79,8 +89,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 30px;
-  padding: 10px 15px;
+  padding: .75rem 1rem;
   transition: transform 100ms ease-out;
 }
 button:hover {

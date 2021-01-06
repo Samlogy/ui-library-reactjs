@@ -1,0 +1,65 @@
+/* Buttons (ERROR - SUCCESS - INFO - WARNING)*/
+.btn{
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  color: #777;
+  padding: .3rem .5rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s;
+}
+.btn:hover{
+  background-color: #fff;
+  color:#555;
+  border: 1px solid  #1890ff;
+  box-shadow: 0 0 0 0.25rem #bbb;
+}
+
+.btn-edit{
+  background-color: #ffcd4d;
+  color:#fff;
+  font-weight: 600;
+  transition: all .5s;
+  border: 1px solid transparent
+}
+.btn-edit:hover{
+  background-color:#f3c349;
+  color:#fff;
+  box-shadow: 0 0 0 0.25rem #d6bf3e
+}
+
+.btn-delete{
+  background-color: #ff4d4f;
+  color:#fff;
+  font-weight: 600;
+  transition: all .5s;
+  border: 1px solid transparent;
+}
+.btn-delete:hover{
+  background-color:#d63e3f;
+  color:#fff;
+  border-color: none;
+  box-shadow: 0 0 0 0.25rem #d63e3f
+}
+
+.btn-info{
+  background-color: #1890ff;
+  color:#fff;
+  font-weight: 600;
+  transition: all .5s;
+  border: 1px solid transparent;
+}
+.btn-info:hover{
+  background-color: #23699e;
+  color:#fff;
+  box-shadow: 0 0 0 0.25rem #3e86d6
+}
+
+
+@media screen and (min-width: 700px) {
+  .btn {
+    width: 150px
+  }
+}

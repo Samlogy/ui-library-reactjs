@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { GrFormClose } from 'react-icons/gr';
 
 import './style.css';
 
@@ -23,14 +24,20 @@ const Modal = ({ onRequestClose }) => {
 	return (
 		<div className="modal__backdrop" onClick={onRequestClose}>
 			<div className="modal__container">
-				<h3 className="modal__title">I'm a modal!</h3>
-				<p>
-					loerm
-				</p>
-				
-				<button type="button" onClick={onRequestClose}>
-					Close this modal
-				</button>
+				<div className="modal-header">
+					<GrFormClose className="close-icon" />
+					<h3>I'm a modal!</h3>
+				</div>
+
+				<div className="modal-body">
+					<p> Show the modal Show the modal Show the modal Show the modal Show the modal Show the modal </p>
+				</div>
+
+				<div className="modal-footer">
+					<button type="button" onClick={onRequestClose}>
+						Close this modal
+					</button>
+				</div>
 			</div>
 		</div>
 	);

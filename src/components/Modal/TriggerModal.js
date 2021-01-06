@@ -4,20 +4,19 @@ import Modal from './Modal';
 import './style.css';
 
 const TriggerModal = () => {
-	const [isModalOpen, setModalIsOpen] = useState(false);
-	
-	console.log(useState("hello")[1])
+	const [isOpen, setIsOpen] = useState(false);
+
 	const toggleModal = () => {
-		setModalIsOpen(!isModalOpen);
+		setIsOpen(!isOpen);
 	};
 
 	return (
-		<main>
-			{isModalOpen && <Modal onRequestClose={toggleModal} />}
+		<>
+			{isOpen && <Modal onRequestClose={toggleModal} />}
 			<button onClick={toggleModal} type="button">
 				Show the modal
 			</button>
-		</main>
+		</>
 	);
 };
 

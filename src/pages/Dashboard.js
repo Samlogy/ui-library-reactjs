@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-
-import { SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, DropDownMenu, NavBar  } from '../components';
-// import './style.css';
+import { BiUpload } from 'react-icons/bi';
+import { Pagination, StepForm } from '../components';
+// SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, DropDownMenu, NavBar, Button, Pagination, Switch
+import './style.css';
 
 const Dashboard = () => {
 
@@ -27,6 +28,60 @@ const Dashboard = () => {
       content: 'SVG is awesome for icons! It\'s a vector image format with optional support for CSS, JavaScript, reusability, accessibility and a bunch more. It was made for this sort of thing.'
     },
   ];
+  // const params = {
+  //   btnClass: 'btn-info',
+  //   btnName: 'Upload',
+  //   btnType: 'button',
+  //   icon: <BiUpload />
+  // };
+ 
+  // const params = {
+  //   checked: true,
+  //   round: true
+  // }
+  // const params = {
+  //   type: 'success',
+  //   message: 'Hello guys it\'s a success message !'
+  // } 
+  const params = [
+    { indicator: '1', title: 'Step 1' },
+    { indicator: '2', title: 'Step 2' },
+    {indicator: '3', title: 'Step 3' },
+  ];
+  /* StepForm */
+  const Checkout = () => {
+    return (
+      <div>
+      <p>Email: <input name="email" /></p>
+      <p>Phone: <input name="Phone" /></p>
+      </div>
+    );
+  };
+  const Payment = () => {
+    return (
+      <div>
+      <p>Email: <input name="email" /></p>
+      </div>
+    );
+  };
+  const Result = () => {
+    return (
+      <div>
+      
+      <p>Phone: <input name="Phone" /></p>
+      </div>
+    );
+  };
+  const steps = [
+		{ label: 'Checkout', component: Checkout(), exitValidation: false },
+		{ label: 'Payment', component: Payment() },
+		{ label: 'Result', component: Result() }
+  ];
+  const Finish = () => {
+		// Notification
+		alert('Norificatoin !!')
+	};
+  
 
   return (
     <div className="dashboard-container">
@@ -35,11 +90,18 @@ const Dashboard = () => {
         {/* { panels.map((el, index) =>  <Accordion key={index} title={el.label} content={el.content} /> ) } */}
         {/* <ShowHidePass /> */}
         {/* <Notification /> */}
-        <TriggerModal />
+        {/* <TriggerModal /> */}
         {/* <Table /> */}
        {/* <Spinner /> */}
       {/* <DropDownMenu /> */}
-      <NavBar />
+      {/* <NavBar /> */}
+      {/* <Button params={params} /> */}
+      {/* <Pagination defaultNode={3} totalNodes={10} /> */}
+      {/* <Switch params={params} /> */}
+      {/* <Search /> */}
+      {/* {<Alert />} */}
+
+      <StepForm steps={steps} onFinish={Finish} alignment={'vertical'} />
     </div>
   );
 };
