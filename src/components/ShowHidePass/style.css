@@ -22,10 +22,15 @@ code {
   font-size: 20px;
 }
 
-.pwd-container img {
+.pwd-container svg.icon-show, .pwd-container svg.icon-hide {
   cursor: pointer;
-  position: absolute;
-  width: 20px;
-  right: 8px;
-  top: 8px;
+position: absolute;
+font-size: 1.1rem;
+right: 15%;
+top: 26%;
+z-index: 999;
+transition: all .5s;
+}
+.pwd-container svg.icon-show:hover, .pwd-container svg.icon-hide:hover {
+color: lightgray;
 }

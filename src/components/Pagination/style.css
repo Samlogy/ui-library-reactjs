@@ -59,11 +59,10 @@
 }
 
 /* Table Data */
-.pagination-container .table{
-  display: flex;
-  flex-direction: column;
+.pagination-container table.table{
+  display: table;
 }
-.pagination-container .table-hide{ display: none }
+
 
 
 

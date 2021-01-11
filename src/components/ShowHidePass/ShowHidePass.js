@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import showPwdImg from './show-password.svg';
-import hidePwdImg from './hide-password.svg'
+import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 
 import './style.css';
 
@@ -13,9 +12,10 @@ const ShowHidePass = () => {
           <div className="pwd-container">
               <input name="pwd" placeholder="Enter Password" type={isRevealPwd ? "text" : "password"} 
                     value={pwd} onChange={e => setPwd(e.target.value)} />
-                    
-              <img title={isRevealPwd ? "Hide password" : "Show password"} src={isRevealPwd ? hidePwdImg : showPwdImg}
-                  onClick={() => setIsRevealPwd(prevState => !prevState)} />
+
+              { isRevealPwd ? 
+                <AiFillEyeInvisible className="icon-hide" onClick={() => setIsRevealPwd(prevState => !prevState)} /> : 
+                <AiFillEye className="icon-show" onClick={() => setIsRevealPwd(prevState => !prevState)}/> }
           </div>
       </div>
 	);

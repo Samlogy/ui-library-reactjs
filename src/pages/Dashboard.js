@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BiUpload } from 'react-icons/bi';
-import { Pagination, StepForm } from '../components';
+import { Admin, Result } from '../components';
 // SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, DropDownMenu, NavBar, Button, Pagination, Switch
 import './style.css';
 
@@ -28,13 +28,7 @@ const Dashboard = () => {
       content: 'SVG is awesome for icons! It\'s a vector image format with optional support for CSS, JavaScript, reusability, accessibility and a bunch more. It was made for this sort of thing.'
     },
   ];
-  // const params = {
-  //   btnClass: 'btn-info',
-  //   btnName: 'Upload',
-  //   btnType: 'button',
-  //   icon: <BiUpload />
-  // };
- 
+
   // const params = {
   //   checked: true,
   //   round: true
@@ -43,70 +37,91 @@ const Dashboard = () => {
   //   type: 'success',
   //   message: 'Hello guys it\'s a success message !'
   // } 
-  const params = [
-    { indicator: '1', title: 'Step 1' },
-    { indicator: '2', title: 'Step 2' },
-    {indicator: '3', title: 'Step 3' },
-  ];
+
   /* StepForm */
-  const Checkout = () => {
-    return (
-      <div>
-      <p>Email: <input name="email" /></p>
-      <p>Phone: <input name="Phone" /></p>
-      </div>
-    );
-  };
-  const Payment = () => {
-    return (
-      <div>
-      <p>Email: <input name="email" /></p>
-      </div>
-    );
-  };
-  const Result = () => {
-    return (
-      <div>
+  // const Checkout = () => {
+  //   return (
+  //     <div>
+  //     <p>Email: <input name="email" /></p>
+  //     <p>Phone: <input name="Phone" /></p>
+  //     </div>
+  //   );
+  // };
+  // const Payment = () => {
+  //   return (
+  //     <div>
+  //     <p>Email: <input name="email" /></p>
+  //     </div>
+  //   );
+  // };
+  // const Result = () => {
+  //   return (
+  //     <div>
       
-      <p>Phone: <input name="Phone" /></p>
-      </div>
-    );
-  };
-  const steps = [
-		{ label: 'Checkout', component: Checkout(), exitValidation: false },
-		{ label: 'Payment', component: Payment() },
-		{ label: 'Result', component: Result() }
-  ];
-  const Finish = () => {
-		// Notification
-		alert('Norificatoin !!')
-	};
+  //     <p>Phone: <input name="Phone" /></p>
+  //     </div>
+  //   );
+  // };
+  // const steps = [
+	// 	{ label: 'Checkout', component: Checkout(), exitValidation: false },
+	// 	{ label: 'Payment', component: Payment() },
+	// 	{ label: 'Result', component: Result() }
+  // ];
+  // const Finish = () => { alert('Norificatoin !!') };
   
+  /* Rate params */
+  // const [rate, setRate] = useState(1);
+  // const handleChange = value => {setRate(rate) };
+
+  /* Btn */
+//   const custom = 'btn-info'
+//  const label = 'Upload';
+//  const type = 'button';
+//  const icon = <BiUpload />;
+
+/* Rate */
+// const [rate, setRate] = useState({ value: 1, rated: false });
+// const handleChange = (value) => { 
+//   console.log(value)
+//   setRate({...rate, value: rate.value });
+// };
+// const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+
+/* Result */
+// const status = 'success';
+// const title = 'Successfully Purchased Cloud Server ECS!';
+// const  msg = 'Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait.';
 
   return (
     <div className="dashboard-container">
         {/* <SideBar /> */}
         {/* <Avatar /> */}    
         {/* { panels.map((el, index) =>  <Accordion key={index} title={el.label} content={el.content} /> ) } */}
-        {/* <ShowHidePass /> */}
+        
         {/* <Notification /> */}
         {/* <TriggerModal /> */}
         {/* <Table /> */}
        {/* <Spinner /> */}
       {/* <DropDownMenu /> */}
       {/* <NavBar /> */}
-      {/* <Button params={params} /> */}
-      {/* <Pagination defaultNode={3} totalNodes={10} /> */}
       {/* <Switch params={params} /> */}
       {/* <Search /> */}
       {/* {<Alert />} */}
 
-      <StepForm steps={steps} onFinish={Finish} alignment={'vertical'} />
+      {/* <StepForm steps={steps} onFinish={Finish} alignment={'vertical'} /> */}
+      {/* <Button className={custom} label={label} type={type} icon={icon} /> */}
+      {/* <ShowHidePass /> */}
+      {/* <Pagination defaultNode={1} totalNodes={10} /> */}
+
+      {/* <div className="rate-container">
+          <Rate outOf={5} onChange={handleChange} defaultValue={1} />
+          {rate.value ? <span className="ant-rate-text">{desc[rate.value - 1]}</span> : ''}
+      </div> */}
+      {/* <Result stutus={status} title={title} msg={msg} /> */}
+      
+      <Admin />
     </div>
   );
 };
 
 export default Dashboard;
-
-
-

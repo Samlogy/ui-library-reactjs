@@ -1,13 +1,16 @@
 /* Buttons (ERROR - SUCCESS - INFO - WARNING)*/
 .btn{
+  display: flex;
+  justify-content: space-evenly;
   width: auto;
   border-radius: 5px;
   border: 1px solid #bbb;
+  padding: .75rem 1rem;
   color: #777;
-  padding: .3rem .5rem;
   font-weight: 600;
   outline: none;
   cursor: pointer;
+  margin: .5rem;
   transition: all .5s;
 }
 .btn:hover{

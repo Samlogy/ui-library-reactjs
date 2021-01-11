@@ -9,18 +9,9 @@ const DropDownMenu = () => {
    const [dropDown, setDropDown] = useState({ key: null, active: false });
 
    const Menu = [
-      {  
-         label: 'Delete',
-         icon: <FaTrash />,
-      },
-      {  
-         label: 'Delete',
-         icon: <HiPencilAlt />,
-      },
-      {  
-         label: 'All',
-         icon: <FaTrash />,
-      }
+      {  label: 'Delete', icon: <FaTrash /> },
+      {  label: 'Delete', icon: <HiPencilAlt /> },
+      {  label: 'All', icon: <FaTrash /> }
    ];
 
    const close = e => {
@@ -41,10 +32,7 @@ const DropDownMenu = () => {
                   <div className={`menu ${dropDown.active ? 'expanded' : 'collapsed'}`}>
                      <ul>
                         { Menu.map((el, index) => 
-                           <li key={index}>
-                              <span>  {el.icon}  </span>
-                              <span className="label"> {el.label} </span>
-                           </li>)}
+                           <li key={index}> <span> {el.icon} </span> <span className="label"> {el.label} </span> </li> )}
                      </ul>
                   </div>
                </div>
