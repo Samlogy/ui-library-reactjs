@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { BiUpload } from 'react-icons/bi';
-import { Admin, Result } from '../components';
-// SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, DropDownMenu, NavBar, Button, Pagination, Switch
+import { Avatar  } from '../components';
+// SideBar, Avatar, Accordion, ShowHidePass, Notification, TriggerModal, Table, Spinner, 
+// DropDownMenu, NavBar, Button, Pagination, Switch, Result, BackToTop
+// Admin, Alert, Card, 
 import './style.css';
 
 const Dashboard = () => {
@@ -92,10 +94,19 @@ const Dashboard = () => {
 // const title = 'Successfully Purchased Cloud Server ECS!';
 // const  msg = 'Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait.';
 
+/* Alert */
+// const type = 'info';
+// const message = 'Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait. ';
+
+/* Avatar */
+// const grantImage = 'http://static.hudl.com/users/prod/5396331_c0c08c570daf469288760e2909c8e8e3.jpg';
+// const list = [ 'Pete Campbell', 'Don Draper', 'Peggy Olsen', 
+//                 'Roger M. Sterling', 'Joan', 'victor@auth0.com' ];
+
   return (
     <div className="dashboard-container">
         {/* <SideBar /> */}
-        {/* <Avatar /> */}    
+          
         {/* { panels.map((el, index) =>  <Accordion key={index} title={el.label} content={el.content} /> ) } */}
         
         {/* <Notification /> */}
@@ -106,8 +117,7 @@ const Dashboard = () => {
       {/* <NavBar /> */}
       {/* <Switch params={params} /> */}
       {/* <Search /> */}
-      {/* {<Alert />} */}
-
+      
       {/* <StepForm steps={steps} onFinish={Finish} alignment={'vertical'} /> */}
       {/* <Button className={custom} label={label} type={type} icon={icon} /> */}
       {/* <ShowHidePass /> */}
@@ -117,9 +127,17 @@ const Dashboard = () => {
           <Rate outOf={5} onChange={handleChange} defaultValue={1} />
           {rate.value ? <span className="ant-rate-text">{desc[rate.value - 1]}</span> : ''}
       </div> */}
+
       {/* <Result stutus={status} title={title} msg={msg} /> */}
-      
-      <Admin />
+      {/* <BackToTop /> */}
+      {/* {<Alert type={type} msg={message} />} */}
+
+      {/* <Avatar name={list[0]} size='xs' shape='circle' badge='online' />   */}
+      {/* <Avatar size="xsm" imageUrl={grantImage} size='med' shape='square'/> */}
+      {/* <Avatar icon size='md' shape='square' />   */}
+
+      {/* <Card /> */}
+      {/* <Admin /> */}
     </div>
   );
 };

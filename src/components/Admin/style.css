@@ -1,15 +1,13 @@
-.SidebarLabel span{
-    margin-left: 16px;
-}
+.SidebarLabel span{ margin-left: 16px }
 
 .SidebarLink{
   display: flex;
   color: #e1e9fc;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
   list-style: none;
-  height: 60px;
+  height: 5vh;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -19,8 +17,11 @@
   cursor: pointer;
 }
 .SidebarLink .SidebarLabel{ 
-  margin-left: .5rem;
+  margin-left: 1.5rem;
 }
+/* .SidebarLink .itemLabel{
+
+} */
 
 .DropdownLink{
   background: #414757;
@@ -44,14 +45,25 @@
   justify-content: flex-start;
   align-items: center
 }
-.NavIcon{
-  margin-left: 2rem;
-  font-size: 1.45rem;
-  height: 80px;
+.NavIcon-open, .NavIcon-close{
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: .5rem;
+  background-color: #333;
   display: flex;
   justify-content: flex-start;
-  align-items: center
+  align-items: center;
+  transition: background .5s;
 }
+.NavIcon-open:hover, .NavIcon-close:hover { background-color: #555 }
+.NavIcon-close { 
+  width: 90%;
+  margin: .5rem auto;
+  background-color: #15171c;
+}
+.NavIcon-open svg, .NavIcon-close svg { margin: .5rem auto }
+
 .SidebarNav{
   background: #15171c;
   width: 100%;
@@ -59,21 +71,15 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
+  top: calc(12vh+3rem);
   left: -100%;
   transition: 350ms;
   z-index: 10;
 }
-.SidebarNav.show{
-  left: 0;
-}
-.SidebarWrap{
-  width: 100%;
-}
+.SidebarNav.show{ left: 0 }
+.SidebarWrap{ width: 100% }
 
 
 @media screen and (min-width: 700px){
-  .SidebarNav{
-    width: 30%
-  }
+  .SidebarNav{ width: 30% }
 }
