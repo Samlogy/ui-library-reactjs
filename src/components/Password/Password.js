@@ -3,7 +3,7 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 
 import './style.css';
 
-const ShowHidePass = () => {
+const Password = () => {
   const [pwd, setPwd] = useState('');
   const [isRevealPwd, setIsRevealPwd] = useState(false);
 
@@ -22,5 +22,5 @@ const ShowHidePass = () => {
 };
 
 
-export default ShowHidePass;
+export default Password;
 

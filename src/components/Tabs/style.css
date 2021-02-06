@@ -1,0 +1,39 @@
+.tabs p { margin-top: 0 }
+
+.tabs {
+  width: 400px;
+  height: 20vh;
+  position: relative;
+  margin: 5rem;
+}
+
+.tabs .tabs-header {
+  padding: .5rem 0 0 0;
+  display: flex;
+  position: relative;
+}
+
+.tabs .tabs-header button {
+  appearance: none;
+  background: none;
+  color: #555;
+  border-radius: 3px;
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  margin-right: 5px;
+  font-weight: 500;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.tabs .tabs-header button[aria-selected="true"] {
+  color: #0084b5; border-bottom: .2rem solid #0084b5; font-weight: 600;
+}
+
+.tabs .tabs-panel {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 2px;
+  outline: none;
+}

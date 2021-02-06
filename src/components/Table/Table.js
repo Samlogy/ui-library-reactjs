@@ -58,8 +58,10 @@ const Table = () => {
       },
     ],
     []
-  )
-  const data = useMemo(() => makeData(100000), [])
+  );
+  const data = useMemo(() => makeData(100000), []);
+  
+ 
 
   return (
     <div className="table-style">

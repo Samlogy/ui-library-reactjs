@@ -3,7 +3,7 @@ import Chevron from "./Chevron";
 
 import "./style.css";
 
-const Accordion = (props) => {
+const Accordion = props => {
   const [setActive, setActiveState] = useState("");
   const [setHeight, setHeightState] = useState("0px");
   const [setRotate, setRotateState] = useState("accordion__icon");

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import checkIcon from '../../assets/check.svg';
-import errorIcon from '../../assets/error.svg';
-import infoIcon from '../../assets/info.svg';
-import warningIcon from '../../assets/warning.svg';
+import { MdError } from 'react-icons/md';
+import { AiFillWarning, AiFillInfoCircle } from 'react-icons/ai';
+import { FaCheckCircle } from 'react-icons/fa';
+
 
 import Toast from './Toast';
 import Button from './Button';
@@ -58,7 +58,7 @@ const Notification = () => {
           title: 'Success',
           description: 'This is a success toast component',
           backgroundColor: '#5cb85c',
-          icon: checkIcon
+          icon: <FaCheckCircle />
         }
         break;
       case 'danger':
@@ -67,7 +67,7 @@ const Notification = () => {
           title: 'Danger',
           description: 'This is a error toast component',
           backgroundColor: '#d9534f',
-          icon: errorIcon
+          icon: <MdError />
         }
         break;
       case 'info':
@@ -76,7 +76,7 @@ const Notification = () => {
           title: 'Info',
           description: 'This is an info toast component',
           backgroundColor: '#5bc0de',
-          icon: infoIcon
+          icon: <AiFillInfoCircle />
         }
         break;
       case 'warning':
@@ -85,7 +85,7 @@ const Notification = () => {
           title: 'Warning',
           description: 'This is a warning toast component',
           backgroundColor: '#f0ad4e',
-          icon: warningIcon
+          icon: <AiFillWarning />
         }
         break;
 
@@ -104,7 +104,7 @@ const Notification = () => {
     // setDismissTime(time);
     setAutoDeleteTime(time);
   };
-
+ 
   return (
     <div className="app">
       <div className="app-header">
@@ -127,8 +127,7 @@ const Notification = () => {
         </div>
 
         <div className="select">
-            <select name="position" value={position}
-                    onChange={selectPosition} className="position-select">
+            <select name="position" value={position} onChange={selectPosition} className="position-select">
                 <option>Select Position</option>
                 <option value="top-right">Top Right</option>
                 <option value="top-left">Top Left</option>

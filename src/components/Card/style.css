@@ -97,3 +97,11 @@
     width: 1rem;
     height: 1rem;
 }
+
+.cards-container .card-footer {
+    display: flex; padding: 1rem;
+}
+.cards-container .card-footer div{
+    margin: auto .2rem;
+    font-size: .9rem;
+}

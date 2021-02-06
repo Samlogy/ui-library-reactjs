@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 
+import { Avatar } from '../'
 import './style.css';
 
 const Card = props => {
-	const { type, msg } = props;
+	const { avatar, title, desc, createdAt, readTime, tags, img } = props;
 
 	return 	<div className="cards-container">
 				<div className="card">
 					<div className="card-header">
-
+						<img src={img} />
 					</div>
 					<div className="card-body">
-						<span> Video </span>
-						<h2> Boost your knowledge with Method </h2>
-						<p> Boost your knowledge with MethodBoost your knowledge with MethodBoost your knowledge with MethodBoost your knowledge with MethodBoost your knowledge with MethodBoost your knowledge with Method </p>
+						<h2> {title} </h2>
+						<p> {desc} </p>
+						<div className="tags">
+							{ tags.map((el, index) => <span className='tag' key={index}> #{el} </span> )}
+						</div>
 					</div>
 
 					<div className="card-footer">
-						<div> AVATAR </div> <div> fullName Dec 26, 2020 * 6min read </div>
+						<Avatar name={avatar} size='xs' shape='circle' /> 
+						<div>  <span> {createdAt} </span> <span> {readTime} min read </span> </div>
 					</div>
 				</div>
 			</div>

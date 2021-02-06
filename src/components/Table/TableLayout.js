@@ -24,7 +24,7 @@ const TableLayout = ({ columns, data }) => {
     };
     return (
       <>
-        <input value={filterInput}  onChange={handleFilterChange}  placeholder={"Search name"} />
+        <input value={filterInput} onChange={handleFilterChange} placeholder={"Search name"} />
 
         <table {...getTableProps()}>
           <thead>
@@ -76,7 +76,7 @@ const TableLayout = ({ columns, data }) => {
           </span>
           <span>
             | Go to page:{' '}
-            <input
+            <input 
               type="number"
               defaultValue={pageIndex + 1}
               onChange={e => {

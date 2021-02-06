@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import {GrFormClose} from 'react-icons/gr'
 
 import './style.css';
 
@@ -42,13 +43,13 @@ const Toast = props => {
                     <div key={index} className={`notification toast ${position}`}
                         style={{backgroundColor: toast.backgroundColor}}>
 
-                        <button onClick={() => deleteToast(toast.id)}>
-                            X
-                        </button>
 
-                        <div className="notification-image">
-                            <img src={toast.icon} alt="" />
-                        </div>
+                        <GrFormClose onClick={() => deleteToast(toast.id)} className="close-icon" />
+                        {/* <button onClick={() => deleteToast(toast.id)}>
+                            <GrFormClose />
+                        </button> */}
+
+                        <div className="notification-image"> {toast.icon} </div>
 
                         <div>
                             <p className="notification-title"> {toast.title} </p>

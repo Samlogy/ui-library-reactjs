@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { BsMoon, BsSun } from 'react-icons/bs';
 
+import useDarkMode from './useDarkMode';
 import './style.css';
 
 const NavBar = () => {
@@ -11,24 +13,14 @@ const NavBar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [navbar, setNavbar] = useState(true);
+  // Dark Mode
+  const [theme, setTheme] = useDarkMode();
 
   const navBarData = [
-    {
-      link: '/',
-      linkName: 'Home'
-    },
-    {
-      link: '#about',
-      linkName: 'About'
-    },
-    {
-      link: '/blog',
-      linkName: 'Blog'
-    },
-    {
-      link: '/contact',
-      linkName: 'Contact'
-    }
+    { link: '/', linkName: 'Home' },
+    { link: '#about', linkName: 'About' },
+    { link: '/blog', linkName: 'Blog' },
+    { link: '/contact', linkName: 'Contact' }
   ];
 
   const handleClick = () => setClick(!click);
@@ -46,14 +38,14 @@ const NavBar = () => {
   const changeBackground = () => {
     if (window.scrollY >= 80) setNavbar(true);
     else setNavbar(false);
-  }
+  };
   
   window.addEventListener('scroll', changeBackground);
-
+//{navbar ? 'navbar active' : 'navbar'}
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className={navbar ? 'navbar active' : 'navbar'}>
+        <nav className='navbar'>
           <div className='navbar-container container'>
               <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 <MdFingerprint className='navbar-icon' /> Logo
@@ -72,6 +64,15 @@ const NavBar = () => {
                   </li> )}
               </ul>
 
+              <ul className={click ? 'nav-menu-mode active' : 'nav-menu-mode'}>
+                <div className="toggle-container">
+                  <BsSun className="icon-sun" />
+                  <input type="checkbox" id="switch" name="theme" onChange={setTheme} checked={theme.active}/> 
+                  <label htmlFor="switch"></label> 
+                  <BsMoon className="icon-moon" />
+                </div>
+              </ul>
+              
               <ul className={click ? 'nav-menu-auth active' : 'nav-menu-auth'}>
                 <li className='nav-btn'>
                   <Link to='/login' className='btn-link'>          
